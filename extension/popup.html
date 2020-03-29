@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <p>My number is 79295082234</p>
+        <h1> It is not real</h1>
+    </body>
+    <script>
+       function obra(){
+            var s = document.body.innerHTML;
+            let ind_start = s.search(/\d{7}/);
+            
+            //for (let i = ind_start-1; i > -1 ; --i){
+            //    if(s[i] == "<"){
+            //        .indexOf(key)
+            //    }
+            //} 
+            let ind_end = ind_start + 11;
+            let numba = s.slice(ind_start, ind_end);
+            //for(let i = ind_start; i <= ind_end; i++){
+              //  numba += s[i]
+            //}
+            
+            let p = document.querySelector("p");
+            p.innerHTML = p.innerHTML.replace(numba, "");
+            let e = document.createElement('a');
+            e.href = 'http://google.ru';
+            e.style = "color: #FF0000"
+            e.appendChild(document.createTextNode(numba));
+            p.appendChild(e);
+            //let before = s.slice(0,ind_start)
+            //let after = s.slice(ind_end)
+            //alert(numba)
+            //s = before + numba
+        }
+
+        document.addEventListener("DOMContentLoaded", obra);
+    </script>
+</html>
