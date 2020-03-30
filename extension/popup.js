@@ -1,3 +1,3 @@
-(function obra(){
-   alert(document.body.innerHTML);
-})();
+//(function obra(){
+//   alert(document.body.innerHTML);
+//})();

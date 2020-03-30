@@ -13,9 +13,10 @@
     </body>
     <script>
        function obra(){
-            var s = document.body.innerHTML;
+            const s = document.body.innerHTML;
             let ind_start = s.search(/\d{7}/);
-            
+            const regexp = /(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?/
+            console.log(s.match(regexp)[0])
             //for (let i = ind_start-1; i > -1 ; --i){
             //    if(s[i] == "<"){
             //        .indexOf(key)
